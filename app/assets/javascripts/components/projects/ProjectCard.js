@@ -109,7 +109,6 @@ export default class ProjectCard extends React.Component {
 
           <div className="col-md-12 members">
             <ul className="member-list">
-              { this.renderUsersAvatar() }
             </ul>
           </div>
         </div>

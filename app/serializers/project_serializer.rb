@@ -1,5 +1,6 @@
 class ProjectSerializer
-  attr_accessor :name,
+  attr_accessor :id,
+                :name,
                 :slug,
                 :archived_at,
                 :velocity,
@@ -12,6 +13,7 @@ class ProjectSerializer
                 :tag_fore_color
 
   def initialize(attrs = {})
+    self.id = attrs.id
     self.name = attrs.truncate_name
     self.velocity = attrs.velocity
     self.volatility = attrs.volatility
@@ -26,6 +28,7 @@ class ProjectSerializer
 
   def to_json
     {
+      id: id,
       name: name,
       velocity: velocity,
       volatility: volatility,
